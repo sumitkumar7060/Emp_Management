@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}
+    add
+{% endblock title %}
+{% block content %}
+<div class="container my-3">
+    <div class="row mx-5">
+    <form class="row g-3" action="{% url 'data' %}" method="post">
+          {% csrf_token %}
+  <div class="col-md-5 mx-5">
+    <label for="Name" class="form-label">Name :</label>
+    <input type="text" class="form-control" id="Name" name="name">
+  </div>
+  <div class="col-md-5 mx-5">
+    <label for="Role" class="form-label">Role :</label>
+    <input type="text" class="form-control" id="Role" name="role">
+  </div>
+  <div class="col-md-5 mx-5">
+    <label for="Mobile" class="form-label">Mobile :</label>
+    <input type="number" class="form-control" id="Mobile" name="mobile">
+  </div>
+   <div class="col-md-5 mx-5">
+    <label for="Manager" class="form-label">Manager :</label>
+    <input type="text" class="form-control" id="Manager" name="manager">
+  </div>
+  <div class="col-md-5 mx-5">
+    <label for="Office" class="form-label">Office :</label>
+    <input type="text" class="form-control" id="Office" name="office">
+  </div>
+    <div class="col-md-5 mx-5">
+    <label for="Joining Date" class="form-label">Joining Date :</label>
+    <input type="date" class="form-control" id="Joining Date" name="joindate">
+  </div>
+<br>  
+  <div class="col-12">
+    <center><button type="submit" class="btn btn-primary" >Data Save</button></center>
+  </div>
+  </form> 
+  </div>
+  </div>
+
+{% endblock content %}

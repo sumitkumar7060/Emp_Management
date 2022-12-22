@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}
+    home
+{% endblock title %}
+{% block content %}
+      {% for i in look %}
+<div class="container my-3">
+    <div class="card" style="width: 50rem;">
+    <div class="row mx-5">
+        <div class="col-text-center">
+
+            <table class="table">
+                <tr>
+                    <td><label for="">Name :</label></td>
+                    <td><label for="">{{i.Name}}</label></td>
+                    <td></td>
+                    <td><label for="">Manager :</label></td>
+                    <td><label for="">{{i.Manager}}</label></td>
+                    </tr>
+                    <tr>
+                    <td><label for="">Role :</label></td>
+                    <td><label for="">{{i.Role}}</label></td>
+                    <td></td>
+                    <td><label for="">Office :</label></td>
+                    <td><label for="">{{i.Office}}</label></td><br>
+                    </tr>
+                    <tr>
+                    <td><label for="">Mobile :</label></td>
+                    <td><label for="">{{i.Mobile}}</label></td>
+                    <td></td>
+                    <td><label for="">Joining Date :</label></td>
+                    <td><label for="">{{i.Joining_date}}</label></td><br>
+                    </tr>
+                
+            </table>
+        </div>     
+    </div>
+ </div>
+</div>
+    
+    {% endfor %}
+
+{% endblock content %}
